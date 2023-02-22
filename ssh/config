@@ -1,0 +1,19 @@
+ServerAliveInterval 30
+ForwardAgent yes
+
+Host jenkins_office
+  Hostname 10.171.15.34
+  User rd_app
+
+Host jenkins_vpn
+  Hostname jenkins-app-ci.kkday.net
+  User rd_app
+
+Host jenkins_slave_office
+  User elvislin
+  Hostname 10.171.15.38
+
+Host jenkins_slave_vpn
+  User elvislin
+  Hostname 10.171.15.38
+  ProxyJump rd_app@jenkins-app-ci.kkday.net
